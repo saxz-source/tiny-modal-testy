@@ -44,15 +44,12 @@ const Modal = ({
      */
     const onCloseModal = (): void => {
         setOpen(false);
-        closeModal();
+       if (closeModal) closeModal();
     };
 
     // Handle the visibility of the modal
     useEffect(() => {
         setOpen(isOpen);
-        return () => {
-            setOpen(true);
-        };
     }, [isOpen]);
 
     return (

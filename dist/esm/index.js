@@ -38,14 +38,12 @@ const Modal = ({ modalMessages, isOpen, closeModal, backGroundShadow, modalCSSPr
      */
     const onCloseModal = () => {
         setOpen(false);
-        closeModal();
+        if (closeModal)
+            closeModal();
     };
     // Handle the visibility of the modal
     useEffect(() => {
         setOpen(isOpen);
-        return () => {
-            setOpen(true);
-        };
     }, [isOpen]);
     return (React.createElement(React.Fragment, null, open && (React.createElement("div", { className: (backGroundShadow
             ? "shadowBackground"

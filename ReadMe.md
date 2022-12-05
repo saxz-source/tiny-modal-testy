@@ -22,19 +22,19 @@ Here is an usage example :
 import { Modal } from "tiny-modal-testy";
 import { useState } from "react";
 
-
-interface formModalInfos {
-    isSuccess: boolean;
-    isOpen: boolean;
-}
-
 export const MyComponent = () => {
+
     // A modal opening state
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     // You have to add an handler for the modal opening
-    const handleModalOpening = () => {
+    const handleModalOpening = (): void => {
         setIsOpen(!isOpen);
+    };
+
+    // You may want to add an handler for the modal closing
+    const closeModal = (): void => {
+        // do stuff
     };
 
     const getMessages = (): string[] => {

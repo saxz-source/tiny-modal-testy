@@ -1,4 +1,3 @@
-/// <reference types="react" />
 declare type ModalProps = {
     modalMessages: string[];
     isOpen: boolean;
@@ -18,6 +17,6 @@ declare type CloseModalCSSProperties = {
     backgroundColor?: string;
     color?: string;
 };
-declare const Modal: ({ modalMessages, isOpen, closeModal, backGroundShadow, modalCSSProperties, closeModalCSSProperties }: ModalProps) => JSX.Element;
+declare const Modal: ({ modalMessages, isOpen, closeModal, backGroundShadow, modalCSSProperties, closeModalCSSProperties }: ModalProps) => any;
 
 export { Modal };
