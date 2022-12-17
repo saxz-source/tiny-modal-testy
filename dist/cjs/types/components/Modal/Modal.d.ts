@@ -1,5 +1,5 @@
 import "./modal.css";
-declare type ModalProps = {
+type ModalProps = {
     modalMessages: string[];
     isOpen: boolean;
     backGroundShadow: boolean;
@@ -7,14 +7,14 @@ declare type ModalProps = {
     modalCSSProperties?: ModalCSSProperties;
     closeModalCSSProperties?: CloseModalCSSProperties;
 };
-declare type ModalCSSProperties = {
+type ModalCSSProperties = {
     zIndex?: number;
     backgroundColor?: string;
     color?: string;
     boxShadow?: string;
     fontWeight?: number;
 };
-declare type CloseModalCSSProperties = {
+type CloseModalCSSProperties = {
     backgroundColor?: string;
     color?: string;
 };
